@@ -5,20 +5,20 @@ using System;
 
 namespace VendorOrder.Tests
 {
-//   [TestClass]
-//   public class CategoryTests : IDisposable
-//   {
+  [TestClass]
+  public class VendorTests 
+  {
 
-//     public void Dispose()
-//     {
-//       Category.ClearAll();
-//     }
-//     [TestMethod]
-//     public void CategoryConstructor_CreatesInstanceOfCategory_Category()
-//     {
-//       Category newCategory = new Category("test category");
-//       Assert.AreEqual(typeof(Category), newCategory.GetType());
-//     } 
+  // public void Dispose()
+  // {
+  //   Vendor.ClearAll();
+  // }
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("Sinclair","C-Store");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    } 
 //   [TestMethod]
 //     public void GetName_ReturnsName_String()
 //     {
@@ -76,5 +76,5 @@ namespace VendorOrder.Tests
 //     //Assert
 //     Assert.AreEqual(newCategory2, result);
 //   }
-//   }
+  }
 }
