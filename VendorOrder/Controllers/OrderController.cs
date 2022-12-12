@@ -1,9 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
-using VendorOrder.Models;
-using System.Collections.Generic;
+// using Microsoft.AspNetCore.Mvc;
+// using VendorOrder.Models;
+// using System.Collections.Generic;
 
-namespace VendorOrder.Controllers
-{
+// namespace VendorOrder.Controllers
+// {
   // public class ItemsController : Controller
   // {
 
@@ -25,4 +25,4 @@ namespace VendorOrder.Controllers
   //     return View(model);
   //   }
   // }
-}
+// }
