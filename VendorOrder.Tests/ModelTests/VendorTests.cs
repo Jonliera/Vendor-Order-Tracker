@@ -61,22 +61,24 @@ namespace VendorOrder.Tests
     //Assert
     Assert.AreEqual(1, result);
    }
-//   [TestMethod]
-//   public void GetAll_ReturnsAllCategoryObjects_CategoryList()
-//   {
-//     //Arrange
-//     string name01 = "Work";
-//     string name02 = "School";
-//     Category newCategory1 = new Category(name01);
-//     Category newCategory2 = new Category(name02);
-//     List<Category> newList = new List<Category> { newCategory1, newCategory2 };
+  [TestMethod]
+  public void GetAll_ReturnsAllVendorObjects_VendorList()
+  {
+    //Arrange
+    string name01 = "Sinclair";
+    string description01 = "C-store";
+    string name02 = "Jhon's";
+    string description02 = "Spices Store";
+    Vendor newVendor1 = new Vendor(name01, description01);
+    Vendor newVendor2 = new Vendor(name02,description02);
+    List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
-//     //Act
-//     List<Category> result = Category.GetAll();
+    //Act
+    List<Vendor> result = Vendor.GetAll();
 
-//     //Assert
-//     CollectionAssert.AreEqual(newList, result);
-//   }
+    //Assert
+    CollectionAssert.AreEqual(newList, result);
+  }
 //   [TestMethod]
 //   public void Find_ReturnsCorrectCategory_Category()
 //   {
