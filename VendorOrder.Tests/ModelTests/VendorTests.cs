@@ -19,19 +19,20 @@ namespace VendorOrder.Tests
       Vendor newVendor = new Vendor("Sinclair","C-Store");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     } 
-//   [TestMethod]
-//     public void GetName_ReturnsName_String()
-//     {
-//       //Arrange
-//       string name = "Test Category";
-//       Category newCategory = new Category(name);
+  [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      //Arrange
+      string name = "Test Vendor";
+      string description = "Test Description";
+      Vendor newVendor = new Vendor(name, description);
 
-//       //Act
-//       string result = newCategory.Name;
+      //Act
+      string result = newVendor.Name;
 
-//       //Assert
-//       Assert.AreEqual(name, result);
-//     }
+      //Assert
+      Assert.AreEqual(name, result);
+     }
 //     [TestMethod]
 //   public void GetId_ReturnsCategoryId_Int()
 //   {
