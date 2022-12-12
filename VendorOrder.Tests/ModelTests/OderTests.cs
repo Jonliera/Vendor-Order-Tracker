@@ -53,6 +53,22 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_Int()
+    {
+      //Arrange
+      string title = "Dough";
+      string description = "5lb Empanadas dough";
+      int price = 50;
+      int date = 12-10-22;
+    
+      //Act
+      Order newOrder = new Order(title,description,price,date);
+      int result = newOrder.Price;
+
+      //Assert
+      Assert.AreEqual(price, result);
+    }
 
 //     [TestMethod]
 //     public void SetDescription_SetDescription_String()
