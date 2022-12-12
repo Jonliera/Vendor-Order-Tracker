@@ -3,16 +3,16 @@ using VendorOrder.Models;
 using System.Collections.Generic;
 using System;
 
-namespace VendorOrder.Tests
+namespace VendorOrder.Tests 
 {
   [TestClass]
-  public class VendorTests 
+  public class VendorTests : IDisposable 
   {
 
-  // public void Dispose()
-  // {
-  //   Vendor.ClearAll();
-  // }
+  public void Dispose()
+  {
+    Vendor.ClearAll();
+  }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -47,19 +47,20 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(description, result);
      }
-//     [TestMethod]
-//   public void GetId_ReturnsCategoryId_Int()
-//   {
-//     //Arrange
-//     string name = "Test Category";
-//     Category newCategory = new Category(name);
+    [TestMethod]
+  public void GetId_ReturnsVendorId_Int()
+  {
+    //Arrange
+    string name = "Test Vendor";
+    string description = "Test Description";
+    Vendor newVendor = new Vendor(name,description);
 
-//     //Act
-//     int result = newCategory.Id;
+    //Act
+    int result = newVendor.Id;
 
-//     //Assert
-//     Assert.AreEqual(1, result);
-//   }
+    //Assert
+    Assert.AreEqual(1, result);
+   }
 //   [TestMethod]
 //   public void GetAll_ReturnsAllCategoryObjects_CategoryList()
 //   {
@@ -90,6 +91,6 @@ namespace VendorOrder.Tests
 
 //     //Assert
 //     Assert.AreEqual(newCategory2, result);
-//   }
+  //  }
   }
 }
