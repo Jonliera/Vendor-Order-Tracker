@@ -1,25 +1,25 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using VendorOrder.Models;
-// using System.Collections.Generic;
-// using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using VendorOrder.Models;
+using System.Collections.Generic;
+using System;
 
-// namespace VendorOrder.Tests
-// {
-  //  [TestClass]
-  //  public class OrderTests : IDisposable
-  //  {
+namespace VendorOrder.Tests
+{
+   [TestClass]
+    public class OrderTests 
+   {
 
   //    public void Dispose()
   //   {
   //     Order.ClearAll();
   //   }
 
-  //    [TestMethod]
-  //    public void OrderConstructor_CreatesInstanceOfItem_Item()
-//     {
-//       Item newItem = new Item("test");
-//       Assert.AreEqual(typeof(Item), newItem.GetType());
-//     }
+     [TestMethod]
+      public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("test","orderTest",100,12-01-22);
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 
 //     [TestMethod]
 //     public void GetDescription_ReturnsDescription_String()
@@ -130,4 +130,5 @@
 //     {
 //       Item newItem = new Item("test");
 //       Assert.AreEqual(typeof(Item), newItem.GetType());
-    // }
+    }
+}
