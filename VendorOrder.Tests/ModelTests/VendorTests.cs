@@ -96,5 +96,26 @@ namespace VendorOrder.Tests
     //Assert
     Assert.AreEqual(newVendor2, result);
    }
+   [TestMethod]
+  public void AddOrder_AssociatesOrderWithVendor_OrderList()
+  {
+    //Arrange
+    string title = "Dough";
+    string description = "5lb Empanadas dough";
+    int price = 50;
+    int date = 12-10-22; 
+    Order newOrder = new Order(title, description, price, date);
+    List<Order> newList = new List<Order>  { newOrder };
+    string name = "Jhon's";
+    string vendorDescription = "Dough Shop";
+    Vendor newVendor = new Vendor (name, vendorDescription);
+    newVendor.AddOrder(newOrder);
+
+    //Act
+    List<Order> result = newVendor.Orders;
+
+    //Assert
+    CollectionAssert.AreEqual(newList, result);
+   }
   }
 }
