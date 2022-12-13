@@ -210,42 +210,26 @@ namespace VendorOrder.Tests
     //Assert
     Assert.AreEqual(1, result);
   }
-//   [TestMethod]
-//   public void Find_ReturnsCorrectItem_Item()
-//   {
-//     //Arrange
-//     string description01 = "Walk the dog";
-//     string description02 = "Wash the dishes";
-//     Item newItem1 = new Item(description01);
-//     Item newItem2 = new Item(description02);
+  [TestMethod]
+  public void Find_ReturnsCorrectOrder_Order()
+  {
+    //Arrange
+    string title01 = "Dough";
+      string description01 = "5lb Empanadas dough";
+      int price01 = 50;
+      int date01 = 12-10-22;
+      string title02 = "Pizza Dough";
+      string description02 = "5lb Pizza dough";
+      int price02 = 30;
+      int date02 = 12-12-22;
+      Order newOrder1 = new Order(title01,description01,price01,date01);
+      Order newOrder2 = new Order(title02,description02,price02,date02);
 
-//     //Act
-//     Item result = Item.Find(2);
+    //Act
+    Order result = Order.Find(2);
 
-//     //Assert
-//     Assert.AreEqual(newItem2, result);
-//   }
-//   }
-// }using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using VendorOrder.Models;
-// using System.Collections.Generic;
-// using System;
-
-// namespace VendorOrder.Tests
-// {
-//   [TestClass]
-//   public class ItemTests : IDisposable
-//   {
-
-//     public void Dispose()
-//     {
-//       Item.ClearAll();
-//     }
-
-//     [TestMethod]
-//     public void ItemConstructor_CreatesInstanceOfItem_Item()
-//     {
-//       Item newItem = new Item("test");
-//       Assert.AreEqual(typeof(Item), newItem.GetType());
-    }
+    //Assert
+    Assert.AreEqual(newOrder2, result);
+  }
+}
 }
