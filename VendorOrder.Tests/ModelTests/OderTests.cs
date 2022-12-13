@@ -170,6 +170,30 @@ namespace VendorOrder.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      // Arrange
+      string title01 = "Dough";
+      string description01 = "5lb Empanadas dough";
+      int price01 = 50;
+      int date01 = 12-10-22;
+      string title02 = "Pizza Dough";
+      string description02 = "5lb Pizza dough";
+      int price02 = 30;
+      int date02 = 12-12-22;
+      Order newOrder1 = new Order(title01,description01,price01,date01);
+      Order newOrder2 = new Order(title02,description02,price02,date02);
+      
+      List<Order> newList = new List<Order> {newOrder1, newOrder2 };
+
+      // Act
+      List<Order> result = Order.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
 
 //     [TestMethod]
 //     public void GetAll_ReturnsItems_ItemsList()
