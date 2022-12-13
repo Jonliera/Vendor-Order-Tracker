@@ -6,13 +6,13 @@ using System;
 namespace VendorOrder.Tests
 {
    [TestClass]
-    public class OrderTests 
+    public class OrderTests : IDisposable
    {
 
-  //    public void Dispose()
-  //   {
-  //     Order.ClearAll();
-  //   }
+     public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
      [TestMethod]
       public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -158,34 +158,18 @@ namespace VendorOrder.Tests
       Assert.AreEqual(updatedDate, result);
     }
 
-//     [TestMethod]
-//     public void SetDescription_SetDescription_String()
-//     {
-//       //Arrange
-//       string description = "walk the dog";
-//       Item newItem = new Item(description);
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> { };
 
-//       //Act
-//       string updatedDescription = "Do the dishes";
-//       newItem.Description = updatedDescription;
-//       string result = newItem.Description;
+      // Act
+      List<Order> result = Order.GetAll();
 
-//       //Assert
-//       Assert.AreEqual(updatedDescription, result);
-//     }
-
-//     [TestMethod]
-//     public void GetAll_ReturnsEmptyList_ItemList()
-//     {
-//       // Arrange
-//       List<Item> newList = new List<Item> { };
-
-//       // Act
-//       List<Item> result = Item.GetAll();
-
-//       // Assert
-//       CollectionAssert.AreEqual(newList, result);
-//     }
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
 //     [TestMethod]
 //     public void GetAll_ReturnsItems_ItemsList()
