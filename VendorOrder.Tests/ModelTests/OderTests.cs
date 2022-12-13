@@ -194,36 +194,22 @@ namespace VendorOrder.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+  public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+  {
+    //Arrange
+    string title = "Dough";
+      string description = "5lb Empanadas dough";
+      int price = 50;
+      int date = 12-10-22;
+      Order newOrder = new Order(title,description,price,date);
 
-//     [TestMethod]
-//     public void GetAll_ReturnsItems_ItemsList()
-//     {
-//       //Arrange
-//       string description01 = "Walk the dog";
-//       string description02 = "Wash the dishes";
-//       Item newItem1 = new Item(description01);
-//       Item newItem2 = new Item(description02);
-//       List<Item> newList = new List<Item> { newItem1, newItem2 };
+    //Act
+    int result = newOrder.Id;
 
-//       //Act
-//       List<Item> result = Item.GetAll();
-
-//       //Assert
-//       CollectionAssert.AreEqual(newList, result);
-//     }
-//     [TestMethod]
-//   public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-//   {
-//     //Arrange
-//     string description = "Walk the dog.";
-//     Item newItem = new Item(description);
-
-//     //Act
-//     int result = newItem.Id;
-
-//     //Assert
-//     Assert.AreEqual(1, result);
-//   }
+    //Assert
+    Assert.AreEqual(1, result);
+  }
 //   [TestMethod]
 //   public void Find_ReturnsCorrectItem_Item()
 //   {
