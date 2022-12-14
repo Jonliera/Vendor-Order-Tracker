@@ -17,7 +17,7 @@ namespace VendorOrder.Tests
      [TestMethod]
       public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test","orderTest",100,12-01-22);
+      Order newOrder = new Order("test","orderTest",100,"12-01-22");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -28,7 +28,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
     
       //Act
       Order newOrder = new Order(title,description,price,date);
@@ -44,7 +44,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
     
       //Act
       Order newOrder = new Order(title,description,price,date);
@@ -60,7 +60,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
     
       //Act
       Order newOrder = new Order(title,description,price,date);
@@ -76,11 +76,11 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
     
       //Act
       Order newOrder = new Order(title,description,price,date);
-      int result = newOrder.Date;
+      string result = newOrder.Date;
 
       //Assert
       Assert.AreEqual(date, result);
@@ -92,7 +92,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
       Order newOrder = new Order(title,description,price,date);
       
       //Act
@@ -110,7 +110,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
       Order newOrder = new Order(title,description,price,date);
       
       //Act
@@ -128,7 +128,7 @@ namespace VendorOrder.Tests
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
       Order newOrder = new Order(title,description,price,date);
       
       //Act
@@ -140,19 +140,19 @@ namespace VendorOrder.Tests
       Assert.AreEqual(updatedPrice, result);
     }
     [TestMethod]
-    public void SetDate_SetDate_Int()
+    public void SetDate_SetDate_String()
     {
       //Arrange
       string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
       Order newOrder = new Order(title,description,price,date);
       
       //Act
-      int updatedDate = 12-22-22;
+      string updatedDate = "12-22-22";
       newOrder.Date = updatedDate;
-      int result = newOrder.Date;
+      string result = newOrder.Date;
 
       //Assert
       Assert.AreEqual(updatedDate, result);
@@ -177,11 +177,11 @@ namespace VendorOrder.Tests
       string title01 = "Dough";
       string description01 = "5lb Empanadas dough";
       int price01 = 50;
-      int date01 = 12-10-22;
+      string date01 = "12-10-22";
       string title02 = "Pizza Dough";
       string description02 = "5lb Pizza dough";
       int price02 = 30;
-      int date02 = 12-12-22;
+      string date02 = "12-12-22";
       Order newOrder1 = new Order(title01,description01,price01,date01);
       Order newOrder2 = new Order(title02,description02,price02,date02);
       
@@ -201,7 +201,7 @@ namespace VendorOrder.Tests
     string title = "Dough";
       string description = "5lb Empanadas dough";
       int price = 50;
-      int date = 12-10-22;
+      string date = "12-10-22";
       Order newOrder = new Order(title,description,price,date);
 
     //Act
@@ -217,11 +217,11 @@ namespace VendorOrder.Tests
       string title01 = "Dough";
       string description01 = "5lb Empanadas dough";
       int price01 = 50;
-      int date01 = 12-10-22;
+      string date01 = "12-10-22";
       string title02 = "Pizza Dough";
       string description02 = "5lb Pizza dough";
       int price02 = 30;
-      int date02 = 12-12-22;
+      string date02 = "12-12-22";
       Order newOrder1 = new Order(title01,description01,price01,date01);
       Order newOrder2 = new Order(title02,description02,price02,date02);
 

@@ -103,7 +103,7 @@ namespace VendorOrder.Tests
     string title = "Dough";
     string description = "5lb Empanadas dough";
     int price = 50;
-    int date = 12-10-22; 
+    string date = "12-10-22"; 
     Order newOrder = new Order(title, description, price, date);
     List<Order> newList = new List<Order>  { newOrder };
     string name = "Jhon's";
